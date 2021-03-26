@@ -3,16 +3,18 @@ const fs = require('fs');
 const util = require('util');
 
 class Reader {
-  read(filepath) {
-    // Função utiliza callbacks e não conseguimos retornar dados dela, já que não utilizamos async / await
-    // Por isso vamos utilizar o promisify e converter em promise
-    fs.readFile(filepath, 'utf-8', (error, data) => {
-      if (error) {
-        console.log(error);
-      } else {
-        console.log(data);
-      }
-    });
+  constructor() {
+    // Transforma a função readFile em promise e salva ela no atributo reader
+    this.reader = util.promisify(fs.readFile);
+  }
+
+  // Agora podemos trabalhar com o async/await devido ao promisify
+  async read(filepath) {
+    try {
+      return await this.reader(filepath, 'utf-8');
+    } catch (error) {
+      return undefined;
+    }
   }
 }
 
