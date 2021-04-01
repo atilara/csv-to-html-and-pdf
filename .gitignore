@@ -77,3 +77,4 @@ typings/
 
 # Files to test conversion
 *.csv
+processedhtml.html
