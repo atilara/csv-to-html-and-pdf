@@ -1,4 +1,4 @@
-# Conversor de Tabelas Excel para HTML e PDF
+# Conversor de Tabelas em CSV para HTML e PDF
 
 ## ℹ Sobre
 
