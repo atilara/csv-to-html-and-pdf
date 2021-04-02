@@ -18,7 +18,8 @@ O conversor possui como principal função a conversão de documentos em CSV par
 ```sh
 # Para instalar todas as dependências, execute:
 $ yarn
-# Para rodar a aplicação, rode (garanta que o arquivo em CSV que você possui o intuito de converter esteja no local correto):
+# Antes da execução garanta que o arquivo em CSV que você possui o intuito de converter esteja no local correto
+# Então, para rodar a aplicação, execute: 
 $ node index.js
 ```
 
